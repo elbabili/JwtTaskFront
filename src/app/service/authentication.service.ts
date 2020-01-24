@@ -18,11 +18,6 @@ export class AuthenticationService {
       //observation des entêtes de la réponse http notamment l'entête "autorisation"
       //l'idée ici avec observe, consiste à spécifier de ne pas convertir le résultat au format json,
       // au contraire nous souhaitons exploiter toute la réponse http afin de vérifier si une personne a des droits, si oui, lesquels
-  /*    const httpOptions = {
-        headers: new HttpHeaders({'Access-Control-Allow-Origin':'*' }),
-        observe: 'response' as 'response'
-      };
-      return this.http.post(this.host+"/login",user,httpOptions);*/
   }
 
   saveToken(token:string){
