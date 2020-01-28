@@ -53,4 +53,8 @@ export class AuthenticationService {
   saveTask(task){
       return this.http.post(this.host + '/tasks',task,{headers:new HttpHeaders({'Authorization':this.jwtToken})});
   }
+
+  register(user){
+      return this.http.post(this.host+"/register",user);
+  }
 }

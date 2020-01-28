@@ -1,1 +1,26 @@
-<p>registration works!</p>
+<p></p>
+
+<div class="container">
+  <div class="alert alert-danger" *ngIf="mode==0 && errorMessage">
+    <strong> {{errorMessage}} </strong>
+  </div>
+
+  <div class="panel panel-success" *ngIf="mode==1">
+    <div class="panel-heading">
+      <strong> Registration Success </strong>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+          <li class="list-group-item">
+            Your ID : {{user.id}}
+          </li>
+        <li class="list-group-item">
+            Your Username : {{user.username}}
+        </li>
+        <li class="list-group-item">
+            Your Role : {{user.roles[0].role}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

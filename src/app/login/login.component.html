@@ -22,8 +22,7 @@
           </div>
 
           <button class="btn btn-danger" type="submit">Login</button>
-          <button class="btn btn-success" type="submit">Register</button>
-
+          <button (click)="onRegister()" class="btn btn-success" [disabled]="!f.valid">Register New User</button>
         </form>
 
       </div>
