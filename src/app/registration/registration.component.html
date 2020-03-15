@@ -18,9 +18,33 @@
             Your Username : {{user.username}}
         </li>
         <li class="list-group-item">
-            Your Role : {{user.roles[0].role}}
+            Your Role : {{user.roles[0].roleName}}
         </li>
       </ul>
     </div>
   </div>
+
+  <div class="row col-md-6 col-md-offset-3" *ngIf="mode==0">
+      <div class="panel panel primary">
+        <div class="panel-heading">Registration</div>
+        <div class="panel-body">
+            <form #f="ngForm" (ngSubmit)="onRegister(f.value)">
+              <div class="from-group">
+                <label class="control-label">Username</label>
+                <input type="text" name="username" ngModel="" class="form-control" required>
+              </div>
+              <div class="from-group">
+                <label class="control-label">Password</label>
+                <input type="password" name="password" ngModel="" class="form-control" required>
+              </div>
+              <div class="from-group">
+                <label class="control-label">Confirm Password</label>
+                <input type="password" name="confirmedPassword" ngModel="" class="form-control" required>
+              </div>
+              <button type="submit" class="btn btn-danger" [disabled]="!f.valid">Register</button>
+            </form>
+        </div>
+      </div>
+  </div>
+
 </div>

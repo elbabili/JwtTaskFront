@@ -55,6 +55,7 @@ export class AuthenticationService {
   }
 
   register(user){
+      console.log("register " + user);
       return this.http.post(this.host+"/register",user);
   }
 }
